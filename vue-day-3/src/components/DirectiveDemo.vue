@@ -1,11 +1,19 @@
 <template>
   <div>
-    <p>This is a directives demo page</p>
+    <!-- <p>This is a directives demo page</p>
     <div v-fs:color.red="fontSize">{{ msg }}</div>
 
     <div>{{ "123123123.1234567890" | decimals }}</div>
     <div>{{ "123123123.1234567890" | country("INDIA") }}</div>
-    <div>{{ "123123123.1234567890" | decimals | country("US", "CHINA") }}</div>
+    <div>{{ "123123123.1234567890" | decimals | country("US", "CHINA") }}</div> -->
+
+    <slot name="1"></slot>
+    <slot name="11">VVVVVV</slot>
+    <div><slot name="AMAZON">VVVVVV</slot></div>
+    <div><slot name="header">VVVVVV</slot></div>
+    <slot v-bind:msg="msg">
+      {{ msg }}
+    </slot>
   </div>
 </template>
 
